@@ -8,13 +8,13 @@ resource "aws_instance" "example" {
   key_name      = "automation"
 
   tags = {
-    Name = "TerraformExample Swami"
+    Name = "Swami"
   }
 
   user_data = file("user_data.sh")
-
+}
 
 output "instance_ip" {
   value = aws_instance.example.public_ip
 }
-}
+
